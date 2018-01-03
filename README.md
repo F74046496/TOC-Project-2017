@@ -7,17 +7,21 @@ A telegram bot based on a finite state machine
 ## Finite State Machine
 ![fsm](./img/show-fsm.png)
 
-## ï¿½Dï¿½D: ï¿½oï¿½vï¿½Hï¿½ï¿½
-ï¿½ï¿½ï¿½UÄ±ï¿½oï¿½Lï¿½áªºï¿½oï¿½vï¿½Mï¿½wï¿½ï¿½ï¿½Uï¿½Ó­nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¡Aï¿½ï¿½Ö¥Lï¿½Ì¦]ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò±ï¿½ï¿½Ò®ï¿½ï¿½Oï¿½ï¿½ï¿½jï¿½qï¿½É¶ï¿½ï¿½C
+## ¥DÃD: ¼o¦v¤H¥Í
 
-##ï¿½ï¿½ï¿½ï¿½:
-ï¿½Ý¥ï¿½ï¿½Ï¥ï¿½`ngrok`ï¿½ï¿½ï¿½oURLï¿½Aï¿½ï¿½ï¿½Û°ï¿½ï¿½ï¿½
+À°§UÄ±±oµL²áªº¼o¦v¨M©w±µ¤U¨Ó­n°µ¤°»ò¨Æ¡A´î¤Ö¥L­Ì¦]¬°¤£ª¾©Ò±¹©Ò®ö¶Oªº¤j¶q®É¶¡¡C
+
+##°õ¦æ:
+
+»Ý¥ý¨Ï¥Î`ngrok`¨ú±oURL¡A±µµÛ°õ¦æ
+
 ```sh
 python3 app.py
 ```
-ï¿½Tï¿½wï¿½Ø¥ß³sï¿½ï¿½ï¿½Yï¿½iï¿½Ï¥ï¿½Telegramï¿½PChatBotï¿½ï¿½ï¿½
 
-##ï¿½pï¿½ó¤¬°ï¿½:
+½T©w«Ø¥ß³sµ²§Y¥i¨Ï¥ÎTelegram»PChatBot²á¤Ñ
+
+##¦p¦ó¤¬°Ê:
 
 The initial state is set to `user`.
 
@@ -43,9 +47,9 @@ Every time `user` state is triggered to `advance` to another state, it will `go_
 
 *Sleeping
 
-ï¿½bï¿½iï¿½J`Bored`ï¿½ï¿½ï¿½á³£ï¿½|ï¿½ï¿½''ï¿½ï¿½ï¿½Ü¥iï¿½Hï¿½ï¿½Jï¿½ï¿½ï¿½rï¿½ï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½~ï¿½]ï¿½ï¿½ï¿½|sendï¿½@ï¿½iï¿½Ï¤ï¿½ï¿½Aï¿½ä¤¤`Excited`ï¿½ï¿½ï¿½Fï¿½ò¥»¹Ï¤ï¿½ï¿½Ù¦ï¿½ï¿½ï¿½ï¿½Ñ­ï¿½ï¿½Öµï¿½ï¿½Ï¥ÎªÌ²ï¿½Å¥ï¿½C
+¦b¶i¤J`Bored`¤§«á³£·|¦³''´£¥Ü¥i¥H¿é¤Jªº¦r¦ê¡A°£¦¹¤§¥~¤]³£·|send¤@±i¹Ï¤ù¡A¨ä¤¤`Excited`°£¤F°ò¥»¹Ï¤ùÁÙ¦³´£¨Ñ­µ¼Öµ¹¨Ï¥ÎªÌ²âÅ¥¡C
 
-ï¿½q`user`ï¿½ï¿½J"feel bored"ï¿½ï¿½|ï¿½iï¿½J`Bored`
+±q`user`¿é¤J"feel bored"«á·|¶i¤J`Bored`
 
 *user
 
