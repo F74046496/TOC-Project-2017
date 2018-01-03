@@ -4,58 +4,58 @@ Template Code for TOC Project 2017
 
 A telegram bot based on a finite state machine
 
-## Setup
-
-### Prerequisite
-* Python 3
-
-#### Install Dependency
-```sh
-pip install -r requirements.txt
-```
-
-* pygraphviz (For visualizing Finite State Machine)
-    * [Setup pygraphviz on Ubuntu](http://www.jianshu.com/p/a3da7ecc5303)
-
-### Secret Data
-
-`API_TOKEN` and `WEBHOOK_URL` in app.py **MUST** be set to proper values.
-Otherwise, you might not be able to run your code.
-
-### Run Locally
-You can either setup https server or using `ngrok` as a proxy.
-
-**`ngrok` would be used in the following instruction**
-
-```sh
-ngrok http 5000
-```
-
-After that, `ngrok` would generate a https URL.
-
-You should set `WEBHOOK_URL` (in app.py) to `your-https-URL/hook`.
-
-#### Run the sever
-
-```sh
-python3 app.py
-```
-
 ## Finite State Machine
 ![fsm](./img/show-fsm.png)
 
-## Usage
+## 主題: 廢宅人生
+幫助覺得無聊的廢宅決定接下來要做什麼事，減少他們因為不知所措所浪費的大量時間。
+
+##執行:
+需先使用`ngrok`取得URL，接著執行
+```sh
+python3 app.py
+```
+確定建立連結即可使用Telegram與ChatBot聊天
+
+##如何互動:
+
 The initial state is set to `user`.
 
 Every time `user` state is triggered to `advance` to another state, it will `go_back` to `user` state after the bot replies corresponding message.
 
-* user
-	* Input: "go to state1"
-		* Reply: "I'm entering state1"
+###state:
+*user
+*state1
+*state2
+*Bored
+*Sweated
+*Annoyed
+*Excited
+*Tired
+*Sleeping
 
-	* Input: "go to state2"
-		* Reply: "I'm entering state2"
+在進入`Bored`之後都會有''提示可以輸入的字串，除此之外也都會send一張圖片，其中`Excited`除了基本圖片還有提供音樂給使用者聆聽。
+從`user`輸入"feel bored"後會進入`Bored`
+*user
+	*input: "feel bored" go to `Bored`
+*Bored
+	*input: "sail" go to `Sweated`
+	*input: "study" go to `Annoyed`
+	*input: "relax" go to `Excited`
+*Sweated
+	*input: "take a shower" go to `Tired`
+*Annoyed
+	*input: "study more" go to `Tired`
+	*input: "relax" go to `Excited`
+*Excited
+	*input: "study" go to `Annoyed`
+	*input: "relax" stay in `Excited`
+*Tired
+	*input: "sleep" go to `Sleeping`
+*Sleeping
+	*just go back `user`
+
 
 
 ## Author
-[Lee-W](https://github.com/Lee-W)
+[F74046496](https://github.com/F74046496)
